@@ -72,11 +72,9 @@ const success = (successMsg) => {
             }
         ]
     };
-    const optins = {};
     const pdf = printer.createPdfKitDocument(docDef);
     pdf.pipe(fs.createWriteStream('extracted.pdf'));
     pdf.end();
-    // console.log(tableFormatter(formattedTableArray));
 };
 
 const error = (errorMsg) => {
